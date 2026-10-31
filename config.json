@@ -1,0 +1,11 @@
+{
+  "exclude_fields": ["pxObjClass"],
+  "unwrap_keys": ["CaseResponse"],
+  "columns": {
+    "primary_id": "referenceid",
+    "json_sets": [
+      { "label": "Set 1", "left": "json1", "left_label": "Base 1", "right": "json2", "right_label": "Base 2" },
+      { "label": "Set 2", "left": "json3", "left_label": "Base 3", "right": "json4", "right_label": "Base 4" }
+    ]
+  }
+}
