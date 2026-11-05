@@ -277,8 +277,8 @@ def build_template():
     ws.title = "Input"
     cols = [COL["primary_id"]] + [c for s in COL["json_sets"] for c in (s["left"], s["right"])]
     ws.append(cols)
-    ws.append(["REF-001", '{"name": "A", "qty": 1}', '{"name": "A", "qty": 2}',
-               '{"status": "open"}', '{"status": "open"}'])
+    sample = ['{"name": "A", "qty": 1}', '{"name": "A", "qty": 2}']
+    ws.append(["REF-001"] + sample * len(COL["json_sets"]))
     buf = io.BytesIO()
     wb.save(buf)
     buf.seek(0)
